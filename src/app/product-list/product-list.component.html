@@ -1,0 +1,42 @@
+<!-- product-list.component.html -->
+
+<div class="container">
+  <h2>Product List</h2>
+  <div class="view-toggle">
+    <button
+      class="view-button"
+      [ngClass]="{ active: isGridView }"
+      (click)="toggleView('grid')"
+    >
+      <i class="fa fa-th-large view-icon"></i>Grid View
+    </button>
+    <button
+      class="view-button"
+      [ngClass]="{ active: !isGridView }"
+      (click)="toggleView('column')"
+    >
+      <i class="fa fa-bars view-icon"></i>Column View
+    </button>
+  </div>
+  <div
+    class="product-container"
+    [ngClass]="{ 'grid-view': isGridView, 'column-view': !isGridView }"
+  >
+    <div *ngFor="let product of products" class="product-item">
+      <img
+        [src]="product.imageUrl"
+        alt="{{ product.name }}"
+        width="100"
+        height="100"
+      />
+      <div>
+        <div class="product-info">
+          <strong>{{ product.name }}</strong> - ${{ product.price }}
+        </div>
+        <div class="enquire">
+          <button (click)="enquire(product)">Add to cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

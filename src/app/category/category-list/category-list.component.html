@@ -1,0 +1,8 @@
+<div class="container">
+  <h2>Categories</h2>
+  <mat-grid-list cols="2" rowHeight="100px" [gutterSize]="'10px'">
+    <mat-grid-tile [ngClass]="'category'" *ngFor="let name of categories">{{
+      name
+    }}</mat-grid-tile>
+  </mat-grid-list>
+</div>
