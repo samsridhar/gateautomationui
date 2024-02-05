@@ -1,0 +1,76 @@
+/* navbar.component.css */
+
+nav {
+  background-color: #333;
+  padding: 10px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.cart {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cart-toggle {
+  cursor: pointer;
+}
+
+.cart i {
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+.cart-count {
+  background-color: #2196f3;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 50%;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.cart-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #333;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 4px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  display: none;
+}
+
+.cart-dropdown.show {
+  display: flex;
+}
+
+.total-price {
+  margin-bottom: 10px;
+}
+
+.cart-button {
+  background-color: #2196f3;
+  color: white;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.cart-button:hover {
+  background-color: #0b7dda;
+}
